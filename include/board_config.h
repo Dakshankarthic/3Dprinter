@@ -1,0 +1,56 @@
+#ifndef BOARD_CONFIG_H
+#define BOARD_CONFIG_H
+
+// --- DISPLAY CONFIGURATION ---
+#define DISPLAY_WIDTH 320
+#define DISPLAY_HEIGHT 480
+#define DISPLAY_ROTATION 1
+
+// --- DISPLAY & TOUCH (SHARED SPI3) ---
+#define DISPLAY_SPI_HOST SPI2_HOST
+#define DISPLAY_SPI_FREQ 30000000
+#define DISPLAY_PIN_SCLK 14
+#define DISPLAY_PIN_MOSI 13
+#define DISPLAY_PIN_MISO 12
+#define DISPLAY_PIN_CS 4
+#define DISPLAY_PIN_DC 9
+#define DISPLAY_PIN_RST 15
+#define DISPLAY_PIN_BL 11
+
+#define TOUCH_SPI_HOST SPI2_HOST
+#define TOUCH_PIN_SCLK 14
+#define TOUCH_PIN_MOSI 13
+#define TOUCH_PIN_MISO 12
+#define TOUCH_PIN_CS 18
+#define TOUCH_PIN_IRQ 21
+
+// --- RFID (SPI) ---
+#define RFID_SDA_PIN 47
+#define RFID_RST_PIN 48
+// --- E-PAPER 2.13" Waveshare (B) Three-Color (Shared SPI bus) ---
+#define EPAPER_CS_PIN 10
+#define EPAPER_DC_PIN 16
+#define EPAPER_RST_PIN 17
+#define EPAPER_BUSY_PIN 8
+
+// --- SENSORS (FINAL STABLE MAP) ---
+#define HX711_SCK_PIN 5
+#define HX711_DOUT_PIN 6
+#define DHT_PIN 2
+
+// --- ACTUATORS ---
+#define HEATER_MOSFET_PIN 7
+#define FAN_MOSFET_PIN 3
+
+#define FAN_PWM_CHANNEL 0
+#define FAN_PWM_FREQ 25000
+#define FAN_PWM_RES 8
+#define LED_PIN 1
+
+// Board Information
+#define BOARD_NAME "ESP32-S3 N16R8"
+#define BOARD_FLASH_SIZE 16
+#define BOARD_PSRAM_SIZE 8
+#define BOARD_CPU_FREQ 240
+
+#endif
