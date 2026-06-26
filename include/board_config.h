@@ -40,7 +40,7 @@
 
 // --- ACTUATORS ---
 #define HEATER_MOSFET_PIN 7
-#define FAN_MOSFET_PIN 3
+#define FAN_MOSFET_PIN 38  // GPIO3 is a strapping pin — moved to GPIO38
 
 #define FAN_PWM_CHANNEL 0
 #define FAN_PWM_FREQ 25000

@@ -1,0 +1,609 @@
+** Drc report for pcb3d.kicad_pcb **
+** Created on 2026-04-12T23:09:17+0530 **
+
+** Found 153 DRC violations **
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1629 mm)
+    Rule: netclass 'Default'; error
+    @(128.5848 mm, 58.0537 mm): Track [gpio16] on Top Layer, length 4.5174 mm
+    @(129.5729 mm, 54.0062 mm): Track [gpio10] on Top Layer, length 6.1036 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1815 mm)
+    Rule: netclass 'Default'; error
+    @(111.9400 mm, 59.6500 mm): Pad 1 [Net-(Q1-B)] of Q1 on Top Layer
+    @(111.1046 mm, 60.2332 mm): Track [IO0] on Top Layer, length 1.6736 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1632 mm)
+    Rule: netclass 'Default'; error
+    @(140.0000 mm, 56.9600 mm): PTH pad 11 [gpio14] of J7
+    @(139.4770 mm, 58.0749 mm): Track [gpio47] on Top Layer, length 10.3233 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1642 mm)
+    Rule: netclass 'Default'; error
+    @(117.8250 mm, 44.5000 mm): Pad 18 [gpio10] of U1 on Top Layer
+    @(116.8455 mm, 45.0905 mm): Track [gpio9] on Top Layer, length 0.4396 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1662 mm)
+    Rule: netclass 'Default'; error
+    @(113.3821 mm, 40.4245 mm): Track [IO0] on Bottom Layer, length 5.9494 mm
+    @(113.5825 mm, 41.0345 mm): Via [gpio18] on Top Layer - Bottom Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1629 mm)
+    Rule: netclass 'Default'; error
+    @(128.5848 mm, 53.5363 mm): Track [gpio16] on Top Layer, length 4.0754 mm
+    @(129.5729 mm, 54.0062 mm): Track [gpio10] on Top Layer, length 6.1036 mm
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1935 mm)
+    Rule: board setup constraints hole; error
+    @(107.8819 mm, 100.5052 mm): Track [+5V] on Top Layer, length 2.6283 mm
+    @(109.1100 mm, 98.4000 mm): NPTH pad of J1
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1642 mm)
+    Rule: netclass 'Default'; error
+    @(117.8250 mm, 44.5000 mm): Pad 18 [gpio10] of U1 on Top Layer
+    @(117.1564 mm, 45.4013 mm): Track [gpio9] on Top Layer, length 0.2350 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1688 mm)
+    Rule: netclass 'Default'; error
+    @(112.9819 mm, 60.0295 mm): Track [IO0] on Top Layer, length 1.8733 mm
+    @(113.8200 mm, 60.6000 mm): Pad 3 [EN] of Q1 on Top Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1629 mm)
+    Rule: netclass 'Default'; error
+    @(125.7031 mm, 50.6546 mm): Track [gpio16] on Top Layer, length 4.8223 mm
+    @(129.5729 mm, 54.0062 mm): Track [gpio10] on Top Layer, length 6.1036 mm
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.2037 mm)
+    Rule: board setup constraints hole; error
+    @(109.7404 mm, 98.6467 mm): Track [+5V] on Top Layer, length 0.5172 mm
+    @(109.1100 mm, 98.4000 mm): NPTH pad of J1
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1631 mm)
+    Rule: netclass 'Default'; error
+    @(126.8148 mm, 59.8160 mm): Track [RTS] on Top Layer, length 5.7632 mm
+    @(126.1500 mm, 58.5000 mm): Pad 2 [DTR] of R6 on Top Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1599 mm)
+    Rule: netclass 'Default'; error
+    @(127.9850 mm, 44.5000 mm): Pad 26 [unconnected-(U1-IO45-Pad26)] of U1 on Top Layer
+    @(127.0055 mm, 45.0905 mm): Track [gpio48] on Top Layer, length 0.7740 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1917 mm)
+    Rule: netclass 'Default'; error
+    @(112.2681 mm, 77.3020 mm): Via [+3.3V] on Top Layer - Bottom Layer
+    @(115.1879 mm, 73.5359 mm): Track [Net-(U3-D-)] on Top Layer, length 6.2467 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1705 mm)
+    Rule: netclass 'Default'; error
+    @(115.2850 mm, 44.5000 mm): Pad 16 [unconnected-(U1-IO46-Pad16)] of U1 on Top Layer
+    @(120.8808 mm, 50.6546 mm): Track [gpio16] on Top Layer, length 7.2587 mm
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.2103 mm)
+    Rule: board setup constraints hole; error
+    @(109.7404 mm, 98.1295 mm): Track [+5V] on Top Layer, length 0.2697 mm
+    @(109.1100 mm, 98.4000 mm): NPTH pad of J1
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1797 mm)
+    Rule: netclass 'Default'; error
+    @(122.9973 mm, 66.0033 mm): Track [rx] on Top Layer, length 1.8626 mm
+    @(123.7839 mm, 66.0460 mm): Via [RTS] on Top Layer - Bottom Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1634 mm)
+    Rule: netclass 'Default'; error
+    @(138.8849 mm, 47.9152 mm): Track [gpio14] on Top Layer, length 7.1306 mm
+    @(140.0000 mm, 49.3400 mm): PTH pad 8 [gpio11] of J7
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.2105 mm)
+    Rule: board setup constraints hole; error
+    @(109.5496 mm, 97.9388 mm): Track [+5V] on Top Layer, length 0.4091 mm
+    @(109.1100 mm, 98.4000 mm): NPTH pad of J1
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1634 mm)
+    Rule: netclass 'Default'; error
+    @(138.8849 mm, 47.9152 mm): Track [gpio14] on Top Layer, length 7.1306 mm
+    @(140.0000 mm, 54.4200 mm): PTH pad 10 [gpio18] of J7
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1821 mm)
+    Rule: netclass 'Default'; error
+    @(119.0934 mm, 71.4433 mm): Via [+3.3V] on Top Layer - Bottom Layer
+    @(119.1362 mm, 70.8557 mm): Track [Net-(U3-D-)] on Top Layer, length 1.1057 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1634 mm)
+    Rule: netclass 'Default'; error
+    @(140.0000 mm, 51.8800 mm): PTH pad 9 [gpio12] of J7
+    @(138.8849 mm, 47.9152 mm): Track [gpio14] on Top Layer, length 7.1306 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1990 mm)
+    Rule: netclass 'Default'; error
+    @(132.1723 mm, 51.8767 mm): Track [gpio12] on Bottom Layer, length 1.8820 mm
+    @(132.4724 mm, 52.4826 mm): Via [gpio21] on Top Layer - Bottom Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1592 mm)
+    Rule: netclass 'Default'; error
+    @(119.6496 mm, 71.0501 mm): Track [Net-(U3-D-)] on Top Layer, length 0.5490 mm
+    @(119.0934 mm, 71.4433 mm): Via [+3.3V] on Top Layer - Bottom Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1702 mm)
+    Rule: netclass 'Default'; error
+    @(115.2850 mm, 44.5000 mm): Pad 16 [unconnected-(U1-IO46-Pad16)] of U1 on Top Layer
+    @(115.7481 mm, 45.5219 mm): Track [gpio16] on Top Layer, length 2.2975 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1614 mm)
+    Rule: netclass 'Default'; error
+    @(119.6616 mm, 70.7111 mm): Track [Net-(U3-D+)] on Bottom Layer, length 7.4591 mm
+    @(119.0934 mm, 71.4433 mm): Via [+3.3V] on Top Layer - Bottom Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1702 mm)
+    Rule: netclass 'Default'; error
+    @(114.0150 mm, 44.5000 mm): Pad 15 [unconnected-(U1-IO3-Pad15)] of U1 on Top Layer
+    @(115.7481 mm, 45.5219 mm): Track [gpio16] on Top Layer, length 2.2975 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1714 mm)
+    Rule: netclass 'Default'; error
+    @(114.0150 mm, 44.5000 mm): Pad 15 [unconnected-(U1-IO3-Pad15)] of U1 on Top Layer
+    @(113.4506 mm, 45.5219 mm): Track [gpio16] on Top Layer, length 0.2089 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1603 mm)
+    Rule: netclass 'Default'; error
+    @(120.3650 mm, 44.5000 mm): Pad 20 [gpio12] of U1 on Top Layer
+    @(119.3855 mm, 45.0905 mm): Track [gpio11] on Top Layer, length 0.4730 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1843 mm)
+    Rule: netclass 'Default'; error
+    @(113.3029 mm, 45.3742 mm): Track [gpio16] on Top Layer, length 0.0097 mm
+    @(114.0150 mm, 44.5000 mm): Pad 15 [unconnected-(U1-IO3-Pad15)] of U1 on Top Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1600 mm)
+    Rule: netclass 'Default'; error
+    @(120.3650 mm, 44.5000 mm): Pad 20 [gpio12] of U1 on Top Layer
+    @(119.7200 mm, 45.4250 mm): Track [gpio11] on Top Layer, length 0.0067 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1604 mm)
+    Rule: netclass 'Default'; error
+    @(113.3029 mm, 45.3645 mm): Track [gpio16] on Top Layer, length 2.5200 mm
+    @(114.0150 mm, 44.5000 mm): Pad 15 [unconnected-(U1-IO3-Pad15)] of U1 on Top Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1600 mm)
+    Rule: netclass 'Default'; error
+    @(119.7248 mm, 45.4298 mm): Track [gpio11] on Top Layer, length 0.2490 mm
+    @(120.3650 mm, 44.5000 mm): Pad 20 [gpio12] of U1 on Top Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1607 mm)
+    Rule: netclass 'Default'; error
+    @(127.4276 mm, 64.0612 mm): Track [tx] on Top Layer, length 4.1082 mm
+    @(127.3176 mm, 64.6862 mm): Track [rx] on Top Layer, length 8.8472 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1599 mm)
+    Rule: netclass 'Default'; error
+    @(121.9255 mm, 45.0905 mm): Track [gpio13] on Top Layer, length 0.6179 mm
+    @(122.9050 mm, 44.5000 mm): Pad 22 [gpio14] of U1 on Top Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1593 mm)
+    Rule: netclass 'Default'; error
+    @(113.5825 mm, 41.0345 mm): Via [gpio18] on Top Layer - Bottom Layer
+    @(114.1486 mm, 41.9989 mm): Track [gpio16] on Top Layer, length 3.5004 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1697 mm)
+    Rule: netclass 'Default'; error
+    @(117.0785 mm, 45.7142 mm): Via [gpio9] on Top Layer - Bottom Layer
+    @(115.7652 mm, 45.2161 mm): Track [gpio18] on Bottom Layer, length 5.4238 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1908 mm)
+    Rule: netclass 'Default'; error
+    @(122.3625 mm, 45.5275 mm): Track [gpio13] on Top Layer, length 0.1637 mm
+    @(122.9050 mm, 44.5000 mm): Pad 22 [gpio14] of U1 on Top Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1777 mm)
+    Rule: netclass 'Default'; error
+    @(115.8182 mm, 50.6039 mm): Via [gpio5] on Top Layer - Bottom Layer
+    @(115.4032 mm, 51.1591 mm): Track [Net-(C4-Pad2)] on Top Layer, length 0.2320 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1599 mm)
+    Rule: netclass 'Default'; error
+    @(112.2500 mm, 38.1700 mm): Pad 10 [gpio17] of U1 on Top Layer
+    @(113.3878 mm, 37.7378 mm): Track [gpio16] on Top Layer, length 0.7740 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1830 mm)
+    Rule: netclass 'Default'; error
+    @(137.1930 mm, 51.4690 mm): Via [gpio47] on Top Layer - Bottom Layer
+    @(136.6062 mm, 52.0588 mm): Track [gpio18] on Bottom Layer, length 0.9887 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1777 mm)
+    Rule: netclass 'Default'; error
+    @(115.8182 mm, 50.6039 mm): Via [gpio5] on Top Layer - Bottom Layer
+    @(115.6352 mm, 51.1591 mm): Track [Net-(C4-Pad2)] on Top Layer, length 0.0780 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1607 mm)
+    Rule: netclass 'Default'; error
+    @(127.3176 mm, 64.6862 mm): Track [rx] on Top Layer, length 8.8472 mm
+    @(124.0091 mm, 64.0612 mm): Track [tx] on Top Layer, length 3.4185 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1599 mm)
+    Rule: netclass 'Default'; error
+    @(126.7150 mm, 44.5000 mm): Pad 25 [gpio48] of U1 on Top Layer
+    @(125.7355 mm, 45.0905 mm): Track [gpio47] on Top Layer, length 0.7740 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1607 mm)
+    Rule: netclass 'Default'; error
+    @(130.3325 mm, 61.1563 mm): Track [tx] on Top Layer, length 5.0768 mm
+    @(127.3176 mm, 64.6862 mm): Track [rx] on Top Layer, length 8.8472 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1708 mm)
+    Rule: netclass 'Default'; error
+    @(140.0000 mm, 51.8800 mm): PTH pad 9 [gpio12] of J7
+    @(138.8963 mm, 50.7575 mm): Track [gpio18] on Bottom Layer, length 1.8097 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1867 mm)
+    Rule: netclass 'Default'; error
+    @(130.3325 mm, 56.0795 mm): Track [tx] on Top Layer, length 4.1182 mm
+    @(133.5735 mm, 53.4193 mm): Track [rx] on Top Layer, length 0.4974 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1599 mm)
+    Rule: netclass 'Default'; error
+    @(123.1955 mm, 45.0905 mm): Track [gpio14] on Top Layer, length 0.7740 mm
+    @(124.1750 mm, 44.5000 mm): Pad 23 [gpio21] of U1 on Top Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1867 mm)
+    Rule: netclass 'Default'; error
+    @(133.5735 mm, 53.4193 mm): Track [rx] on Top Layer, length 0.4974 mm
+    @(133.2445 mm, 53.1675 mm): Track [tx] on Top Layer, length 0.6072 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1568 mm)
+    Rule: netclass 'Default'; error
+    @(133.5735 mm, 53.4193 mm): Track [rx] on Top Layer, length 0.4974 mm
+    @(134.2112 mm, 52.3067 mm): Track [+5V] on Top Layer, length 0.7776 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1614 mm)
+    Rule: netclass 'Default'; error
+    @(133.5735 mm, 53.4193 mm): Track [rx] on Top Layer, length 0.4974 mm
+    @(134.0680 mm, 53.0710 mm): Track [+5V] on Top Layer, length 15.4563 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1598 mm)
+    Rule: netclass 'Default'; error
+    @(124.6907 mm, 30.2902 mm): Track [gpio4] on Bottom Layer, length 9.8382 mm
+    @(132.2367 mm, 30.8568 mm): Via [gpio2] on Top Layer - Bottom Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1776 mm)
+    Rule: netclass 'Default'; error
+    @(130.8361 mm, 50.4345 mm): Track [gpio21] on Top Layer, length 1.0266 mm
+    @(130.2871 mm, 51.4510 mm): Track [gpio12] on Top Layer, length 4.1707 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1613 mm)
+    Rule: netclass 'Default'; error
+    @(133.4262 mm, 52.5460 mm): Track [tx] on Top Layer, length 3.9226 mm
+    @(133.7250 mm, 52.9455 mm): Track [rx] on Top Layer, length 0.3115 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1569 mm)
+    Rule: netclass 'Default'; error
+    @(133.2445 mm, 53.1675 mm): Track [tx] on Top Layer, length 0.6072 mm
+    @(133.7250 mm, 52.9455 mm): Track [rx] on Top Layer, length 0.3115 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1569 mm)
+    Rule: netclass 'Default'; error
+    @(133.4222 mm, 52.5869 mm): Track [tx] on Top Layer, length 0.0411 mm
+    @(133.7250 mm, 52.9455 mm): Track [rx] on Top Layer, length 0.3115 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1835 mm)
+    Rule: netclass 'Default'; error
+    @(115.8623 mm, 46.8071 mm): Track [gpio8] on Top Layer, length 1.8548 mm
+    @(115.4162 mm, 48.7630 mm): Track [gpio17] on Top Layer, length 6.5435 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1568 mm)
+    Rule: netclass 'Default'; error
+    @(134.2112 mm, 52.3067 mm): Track [+5V] on Top Layer, length 0.7776 mm
+    @(133.7250 mm, 52.9455 mm): Track [rx] on Top Layer, length 0.3115 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1655 mm)
+    Rule: netclass 'Default'; error
+    @(140.0000 mm, 36.6400 mm): PTH pad 3 [gpio9] of J7
+    @(141.1172 mm, 36.0320 mm): Track [gpio4] on Bottom Layer, length 4.5709 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1776 mm)
+    Rule: netclass 'Default'; error
+    @(129.8095 mm, 50.4345 mm): Track [gpio21] on Top Layer, length 6.7835 mm
+    @(127.3380 mm, 48.5019 mm): Track [gpio12] on Top Layer, length 3.2712 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1618 mm)
+    Rule: netclass 'Default'; error
+    @(133.7250 mm, 52.9455 mm): Track [rx] on Top Layer, length 0.3115 mm
+    @(134.0680 mm, 53.0710 mm): Track [+5V] on Top Layer, length 15.4563 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1835 mm)
+    Rule: netclass 'Default'; error
+    @(115.4162 mm, 48.7630 mm): Track [gpio17] on Top Layer, length 6.5435 mm
+    @(114.0074 mm, 46.8071 mm): Track [gpio8] on Top Layer, length 4.0286 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1655 mm)
+    Rule: netclass 'Default'; error
+    @(140.0000 mm, 39.1800 mm): PTH pad 4 [gpio15] of J7
+    @(141.1172 mm, 36.0320 mm): Track [gpio4] on Bottom Layer, length 4.5709 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1571 mm)
+    Rule: netclass 'Default'; error
+    @(133.7789 mm, 52.6387 mm): Track [rx] on Top Layer, length 0.6086 mm
+    @(133.4262 mm, 52.5460 mm): Track [tx] on Top Layer, length 3.9226 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1776 mm)
+    Rule: netclass 'Default'; error
+    @(130.2871 mm, 51.4510 mm): Track [gpio12] on Top Layer, length 4.1707 mm
+    @(129.8095 mm, 50.4345 mm): Track [gpio21] on Top Layer, length 6.7835 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1848 mm)
+    Rule: netclass 'Default'; error
+    @(119.7124 mm, 70.5501 mm): Track [Net-(U3-D+)] on Top Layer, length 0.3410 mm
+    @(119.1362 mm, 70.8557 mm): Track [Net-(U3-D-)] on Top Layer, length 1.1057 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1661 mm)
+    Rule: netclass 'Default'; error
+    @(110.7892 mm, 44.1361 mm): Track [gpio17] on Top Layer, length 4.8061 mm
+    @(114.0074 mm, 46.8071 mm): Track [gpio8] on Top Layer, length 4.0286 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1913 mm)
+    Rule: netclass 'Default'; error
+    @(133.7789 mm, 52.6387 mm): Track [rx] on Top Layer, length 0.6086 mm
+    @(135.7870 mm, 50.7309 mm): Track [+5V] on Top Layer, length 2.2285 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1880 mm)
+    Rule: netclass 'Default'; error
+    @(106.1019 mm, 100.4147 mm): Track [EN] on Bottom Layer, length 20.2725 mm
+    @(122.2500 mm, 99.0000 mm): PTH pad 1 [GND] of SW1
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1682 mm)
+    Rule: netclass 'Default'; error
+    @(119.6496 mm, 71.0501 mm): Track [Net-(U3-D-)] on Top Layer, length 0.5490 mm
+    @(119.7124 mm, 70.5501 mm): Track [Net-(U3-D+)] on Top Layer, length 0.3410 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1835 mm)
+    Rule: netclass 'Default'; error
+    @(115.4162 mm, 48.7630 mm): Track [gpio17] on Top Layer, length 6.5435 mm
+    @(111.1588 mm, 43.9585 mm): Track [gpio8] on Top Layer, length 2.4579 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1568 mm)
+    Rule: netclass 'Default'; error
+    @(133.7789 mm, 52.6387 mm): Track [rx] on Top Layer, length 0.6086 mm
+    @(133.2445 mm, 53.1675 mm): Track [tx] on Top Layer, length 0.6072 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1848 mm)
+    Rule: netclass 'Default'; error
+    @(119.3714 mm, 70.5501 mm): Track [Net-(U3-D+)] on Top Layer, length 0.2718 mm
+    @(119.1362 mm, 70.8557 mm): Track [Net-(U3-D-)] on Top Layer, length 1.1057 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1661 mm)
+    Rule: netclass 'Default'; error
+    @(110.7892 mm, 44.1361 mm): Track [gpio17] on Top Layer, length 4.8061 mm
+    @(111.1588 mm, 43.9585 mm): Track [gpio8] on Top Layer, length 2.4579 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1568 mm)
+    Rule: netclass 'Default'; error
+    @(133.7789 mm, 52.6387 mm): Track [rx] on Top Layer, length 0.6086 mm
+    @(133.4222 mm, 52.5869 mm): Track [tx] on Top Layer, length 0.0411 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1682 mm)
+    Rule: netclass 'Default'; error
+    @(119.6496 mm, 71.0501 mm): Track [Net-(U3-D-)] on Top Layer, length 0.5490 mm
+    @(119.3714 mm, 70.5501 mm): Track [Net-(U3-D+)] on Top Layer, length 0.2718 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1599 mm)
+    Rule: netclass 'Default'; error
+    @(125.4450 mm, 44.5000 mm): Pad 24 [gpio47] of U1 on Top Layer
+    @(125.0128 mm, 45.6378 mm): Track [gpio21] on Top Layer, length 0.7740 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1870 mm)
+    Rule: netclass 'Default'; error
+    @(111.5325 mm, 95.1363 mm): Via [Net-(J1-D+-PadA6)] on Top Layer - Bottom Layer
+    @(112.1262 mm, 90.2399 mm): Track [Net-(J1-D--PadA7)] on Bottom Layer, length 8.5832 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1603 mm)
+    Rule: netclass 'Default'; error
+    @(133.7789 mm, 52.6387 mm): Track [rx] on Top Layer, length 0.6086 mm
+    @(134.2112 mm, 52.3067 mm): Track [+5V] on Top Layer, length 0.7776 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1661 mm)
+    Rule: netclass 'Default'; error
+    @(110.7892 mm, 44.1361 mm): Track [gpio17] on Top Layer, length 4.8061 mm
+    @(111.1588 mm, 41.5005 mm): Track [gpio8] on Top Layer, length 0.7071 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1604 mm)
+    Rule: netclass 'Default'; error
+    @(111.1588 mm, 41.5005 mm): Track [gpio8] on Top Layer, length 0.7071 mm
+    @(112.2500 mm, 41.9800 mm): Pad 13 [unconnected-(U1-USB_D--Pad13)] of U1 on Top Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1680 mm)
+    Rule: netclass 'Default'; error
+    @(124.4720 mm, 46.2858 mm): Via [gpio14] on Top Layer - Bottom Layer
+    @(122.4914 mm, 45.7110 mm): Track [gpio13] on Bottom Layer, length 6.2854 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1984 mm)
+    Rule: netclass 'Default'; error
+    @(129.1153 mm, 45.1939 mm): Via [gpio48] on Top Layer - Bottom Layer
+    @(128.8650 mm, 45.7991 mm): Track [gpio13] on Bottom Layer, length 8.1910 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1604 mm)
+    Rule: netclass 'Default'; error
+    @(112.2500 mm, 39.4400 mm): Pad 11 [gpio18] of U1 on Top Layer
+    @(111.1115 mm, 39.0078 mm): Track [gpio17] on Top Layer, length 0.7740 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1959 mm)
+    Rule: netclass 'Default'; error
+    @(110.7481 mm, 98.1472 mm): Via [Net-(J1-CC1)] on Top Layer - Bottom Layer
+    @(111.2496 mm, 96.9546 mm): Track [Net-(J1-D--PadA7)] on Top Layer, length 0.8584 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1959 mm)
+    Rule: netclass 'Default'; error
+    @(110.7481 mm, 98.1472 mm): Via [Net-(J1-CC1)] on Top Layer - Bottom Layer
+    @(111.2496 mm, 97.8130 mm): Track [Net-(J1-D--PadA7)] on Top Layer, length 1.2397 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1599 mm)
+    Rule: netclass 'Default'; error
+    @(121.6350 mm, 44.5000 mm): Pad 21 [gpio13] of U1 on Top Layer
+    @(121.2028 mm, 45.6378 mm): Track [gpio12] on Top Layer, length 0.7740 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1775 mm)
+    Rule: netclass 'Default'; error
+    @(111.5000 mm, 79.0000 mm): Pad 1 [+3.3V] of C6 on Top Layer
+    @(110.7708 mm, 77.9530 mm): Track [Net-(U3-D-)] on Top Layer, length 4.6426 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1600 mm)
+    Rule: netclass 'Default'; error
+    @(127.4276 mm, 64.0612 mm): Track [tx] on Top Layer, length 4.1082 mm
+    @(129.5729 mm, 61.1144 mm): Via [gpio10] on Top Layer - Bottom Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1599 mm)
+    Rule: netclass 'Default'; error
+    @(112.8405 mm, 27.0305 mm): Track [GND] on Top Layer, length 0.7517 mm
+    @(112.2500 mm, 28.0100 mm): Pad 2 [+3.3V] of U1 on Top Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1958 mm)
+    Rule: netclass 'Default'; error
+    @(130.3325 mm, 56.0795 mm): Track [tx] on Top Layer, length 4.1182 mm
+    @(132.7260 mm, 53.1214 mm): Track [Net-(D2-A)] on Top Layer, length 0.3109 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1958 mm)
+    Rule: netclass 'Default'; error
+    @(130.3325 mm, 56.0795 mm): Track [tx] on Top Layer, length 4.1182 mm
+    @(132.9459 mm, 52.9016 mm): Track [Net-(D2-A)] on Top Layer, length 0.4010 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1688 mm)
+    Rule: netclass 'Default'; error
+    @(120.9074 mm, 46.8614 mm): Track [gpio11] on Bottom Layer, length 15.8149 mm
+    @(124.4720 mm, 46.2858 mm): Via [gpio14] on Top Layer - Bottom Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1958 mm)
+    Rule: netclass 'Default'; error
+    @(130.3325 mm, 56.0795 mm): Track [tx] on Top Layer, length 4.1182 mm
+    @(132.1584 mm, 53.1214 mm): Track [Net-(D2-A)] on Top Layer, length 0.5676 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1599 mm)
+    Rule: netclass 'Default'; error
+    @(113.3327 mm, 40.2226 mm): Track [gpio18] on Top Layer, length 0.6959 mm
+    @(112.2500 mm, 40.7100 mm): Pad 12 [gpio8] of U1 on Top Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1572 mm)
+    Rule: netclass 'Default'; error
+    @(133.0658 mm, 52.5190 mm): Track [Net-(D2-A)] on Top Layer, length 0.4424 mm
+    @(133.2445 mm, 53.1675 mm): Track [tx] on Top Layer, length 0.6072 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1600 mm)
+    Rule: netclass 'Default'; error
+    @(132.7260 mm, 53.1214 mm): Track [Net-(D2-A)] on Top Layer, length 0.3109 mm
+    @(133.2445 mm, 53.1675 mm): Track [tx] on Top Layer, length 0.6072 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1572 mm)
+    Rule: netclass 'Default'; error
+    @(132.9459 mm, 52.9016 mm): Track [Net-(D2-A)] on Top Layer, length 0.4010 mm
+    @(133.2445 mm, 53.1675 mm): Track [tx] on Top Layer, length 0.6072 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1579 mm)
+    Rule: netclass 'Default'; error
+    @(133.0658 mm, 52.5190 mm): Track [Net-(D2-A)] on Top Layer, length 0.4424 mm
+    @(133.4222 mm, 52.5869 mm): Track [tx] on Top Layer, length 0.0411 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1599 mm)
+    Rule: netclass 'Default'; error
+    @(112.8405 mm, 35.9205 mm): Track [gpio15] on Top Layer, length 0.7740 mm
+    @(112.2500 mm, 36.9000 mm): Pad 9 [gpio16] of U1 on Top Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1579 mm)
+    Rule: netclass 'Default'; error
+    @(133.4222 mm, 52.5869 mm): Track [tx] on Top Layer, length 0.0411 mm
+    @(132.9459 mm, 52.9016 mm): Track [Net-(D2-A)] on Top Layer, length 0.4010 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1570 mm)
+    Rule: netclass 'Default'; error
+    @(133.0658 mm, 52.5190 mm): Track [Net-(D2-A)] on Top Layer, length 0.4424 mm
+    @(133.4262 mm, 52.5460 mm): Track [tx] on Top Layer, length 3.9226 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1570 mm)
+    Rule: netclass 'Default'; error
+    @(133.4262 mm, 52.5460 mm): Track [tx] on Top Layer, length 3.9226 mm
+    @(132.9459 mm, 52.9016 mm): Track [Net-(D2-A)] on Top Layer, length 0.4010 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1570 mm)
+    Rule: netclass 'Default'; error
+    @(133.4262 mm, 52.5460 mm): Track [tx] on Top Layer, length 3.9226 mm
+    @(133.0658 mm, 52.0766 mm): Track [Net-(D2-A)] on Top Layer, length 3.3627 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1827 mm)
+    Rule: netclass 'Default'; error
+    @(114.7254 mm, 99.2044 mm): Track [Net-(J1-CC2)] on Top Layer, length 2.2976 mm
+    @(116.3200 mm, 97.8700 mm): PTH pad S1 [GND] of J1
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1829 mm)
+    Rule: netclass 'Default'; error
+    @(128.0857 mm, 43.0195 mm): Track [gpio15] on Top Layer, length 0.8905 mm
+    @(129.7500 mm, 43.2500 mm): Pad 27 [IO0] of U1 on Top Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1678 mm)
+    Rule: netclass 'Default'; error
+    @(127.9850 mm, 44.5000 mm): Pad 26 [unconnected-(U1-IO45-Pad26)] of U1 on Top Layer
+    @(128.0857 mm, 43.0195 mm): Track [gpio15] on Top Layer, length 0.8905 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1704 mm)
+    Rule: netclass 'Default'; error
+    @(132.4724 mm, 52.4826 mm): Via [gpio21] on Top Layer - Bottom Layer
+    @(132.9459 mm, 52.9016 mm): Track [Net-(D2-A)] on Top Layer, length 0.4010 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1829 mm)
+    Rule: netclass 'Default'; error
+    @(128.7154 mm, 43.6492 mm): Track [gpio15] on Top Layer, length 0.1620 mm
+    @(129.7500 mm, 43.2500 mm): Pad 27 [IO0] of U1 on Top Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1867 mm)
+    Rule: netclass 'Default'; error
+    @(133.0658 mm, 52.5190 mm): Track [Net-(D2-A)] on Top Layer, length 0.4424 mm
+    @(132.4724 mm, 52.4826 mm): Via [gpio21] on Top Layer - Bottom Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1787 mm)
+    Rule: netclass 'Default'; error
+    @(127.9850 mm, 44.5000 mm): Pad 26 [unconnected-(U1-IO45-Pad26)] of U1 on Top Layer
+    @(128.7154 mm, 43.6492 mm): Track [gpio15] on Top Layer, length 0.1620 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1782 mm)
+    Rule: netclass 'Default'; error
+    @(129.7500 mm, 43.2500 mm): Pad 27 [IO0] of U1 on Top Layer
+    @(128.7154 mm, 43.8112 mm): Track [gpio15] on Top Layer, length 0.3654 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1580 mm)
+    Rule: netclass 'Default'; error
+    @(134.4308 mm, 79.2401 mm): Track [gpio2] on Top Layer, length 26.1430 mm
+    @(134.2112 mm, 52.3067 mm): Track [+5V] on Top Layer, length 0.7776 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1594 mm)
+    Rule: netclass 'Default'; error
+    @(134.0680 mm, 68.5273 mm): Track [+5V] on Top Layer, length 10.8302 mm
+    @(134.4308 mm, 79.2401 mm): Track [gpio2] on Top Layer, length 26.1430 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1787 mm)
+    Rule: netclass 'Default'; error
+    @(127.9850 mm, 44.5000 mm): Pad 26 [unconnected-(U1-IO45-Pad26)] of U1 on Top Layer
+    @(128.7154 mm, 43.8112 mm): Track [gpio15] on Top Layer, length 0.3654 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1594 mm)
+    Rule: netclass 'Default'; error
+    @(134.4308 mm, 79.2401 mm): Track [gpio2] on Top Layer, length 26.1430 mm
+    @(134.0680 mm, 53.0710 mm): Track [+5V] on Top Layer, length 15.4563 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1580 mm)
+    Rule: netclass 'Default'; error
+    @(134.4308 mm, 53.0972 mm): Track [gpio2] on Top Layer, length 4.1117 mm
+    @(134.2112 mm, 52.3067 mm): Track [+5V] on Top Layer, length 0.7776 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1594 mm)
+    Rule: netclass 'Default'; error
+    @(134.4308 mm, 53.0972 mm): Track [gpio2] on Top Layer, length 4.1117 mm
+    @(134.0680 mm, 53.0710 mm): Track [+5V] on Top Layer, length 15.4563 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1590 mm)
+    Rule: netclass 'Default'; error
+    @(111.9400 mm, 61.5500 mm): Pad 2 [RTS] of Q1 on Top Layer
+    @(107.7970 mm, 60.9893 mm): Track [EN] on Top Layer, length 5.0196 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1657 mm)
+    Rule: netclass 'Default'; error
+    @(106.0528 mm, 59.2451 mm): Track [EN] on Top Layer, length 6.4618 mm
+    @(106.6253 mm, 57.5193 mm): Via [MG2] on Top Layer - Bottom Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1646 mm)
+    Rule: netclass 'Default'; error
+    @(129.1587 mm, 27.0305 mm): Track [GND] on Top Layer, length 0.4396 mm
+    @(129.7500 mm, 28.0100 mm): Pad 39 [Net-(U1-IO1)] of U1 on Top Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1646 mm)
+    Rule: netclass 'Default'; error
+    @(128.8479 mm, 27.3413 mm): Track [GND] on Top Layer, length 0.2386 mm
+    @(129.7500 mm, 28.0100 mm): Pad 39 [Net-(U1-IO1)] of U1 on Top Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1599 mm)
+    Rule: netclass 'Default'; error
+    @(130.3405 mm, 30.8405 mm): Track [rx] on Top Layer, length 0.5510 mm
+    @(129.7500 mm, 31.8200 mm): Pad 36 [tx] of U1 on Top Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1676 mm)
+    Rule: netclass 'Default'; error
+    @(130.7302 mm, 31.2302 mm): Track [rx] on Top Layer, length 0.3332 mm
+    @(129.7500 mm, 31.8200 mm): Pad 36 [tx] of U1 on Top Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1966 mm)
+    Rule: netclass 'Default'; error
+    @(117.2884 mm, 86.0843 mm): Track [+5V] on Top Layer, length 10.6660 mm
+    @(122.1782 mm, 82.0480 mm): Via [Net-(U3-VBUS)] on Top Layer - Bottom Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1606 mm)
+    Rule: netclass 'Default'; error
+    @(117.2884 mm, 86.0843 mm): Track [+5V] on Top Layer, length 10.6660 mm
+    @(123.9678 mm, 78.6025 mm): Via [Net-(U3-VBUS)] on Top Layer - Bottom Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1640 mm)
+    Rule: netclass 'Default'; error
+    @(120.3650 mm, 44.5000 mm): Pad 20 [gpio12] of U1 on Top Layer
+    @(119.7248 mm, 45.6788 mm): Via [gpio11] on Top Layer - Bottom Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1599 mm)
+    Rule: netclass 'Default'; error
+    @(118.6628 mm, 45.6378 mm): Track [gpio10] on Top Layer, length 0.7740 mm
+    @(119.0950 mm, 44.5000 mm): Pad 19 [gpio11] of U1 on Top Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1679 mm)
+    Rule: netclass 'Default'; error
+    @(129.7500 mm, 41.9800 mm): Pad 28 [unconnected-(U1-IO35-Pad28)] of U1 on Top Layer
+    @(128.5256 mm, 42.3256 mm): Track [IO0] on Top Layer, length 0.3443 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1599 mm)
+    Rule: netclass 'Default'; error
+    @(129.7500 mm, 41.9800 mm): Pad 28 [unconnected-(U1-IO35-Pad28)] of U1 on Top Layer
+    @(128.7691 mm, 42.5691 mm): Track [IO0] on Top Layer, length 0.5510 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1691 mm)
+    Rule: netclass 'Default'; error
+    @(122.4782 mm, 45.7242 mm): Via [gpio13] on Top Layer - Bottom Layer
+    @(122.9050 mm, 44.5000 mm): Pad 22 [gpio14] of U1 on Top Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1693 mm)
+    Rule: netclass 'Default'; error
+    @(129.7500 mm, 41.9800 mm): Pad 28 [unconnected-(U1-IO35-Pad28)] of U1 on Top Layer
+    @(128.5256 mm, 42.2501 mm): Via [IO0] on Top Layer - Bottom Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1782 mm)
+    Rule: netclass 'Default'; error
+    @(119.1792 mm, 70.2287 mm): Via [Net-(U3-D+)] on Top Layer - Bottom Layer
+    @(120.0500 mm, 70.0500 mm): Pad 3 [unconnected-(U3-GND-Pad29)_1] of U3 on Top Layer
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1637 mm)
+    Rule: netclass 'Default'; error
+    @(113.4688 mm, 27.6194 mm): Via [GND] on Top Layer - Bottom Layer
+    @(112.2500 mm, 28.0100 mm): Pad 2 [+3.3V] of U1 on Top Layer
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(155.0000 mm, 104.0000 mm): Segment on Edge.Cuts
+    @(107.3000 mm, 103.0000 mm): Segment of J1 on Top Overlay
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(155.0000 mm, 104.0000 mm): Segment on Edge.Cuts
+    @(116.7000 mm, 103.0000 mm): Segment of J1 on Top Overlay
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(84.0000 mm, 25.5000 mm): Segment on Edge.Cuts
+    @(111.8000 mm, 25.9750 mm): Polygon of U1 on Top Overlay
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: board setup constraints; error
+    @(118.1000 mm, 33.7600 mm): PTH pad 41 [GND] of U1
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: board setup constraints; error
+    @(118.1000 mm, 35.1600 mm): PTH pad 41 [GND] of U1
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: board setup constraints; error
+    @(118.8000 mm, 33.0600 mm): PTH pad 41 [GND] of U1
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: board setup constraints; error
+    @(118.8000 mm, 34.4600 mm): PTH pad 41 [GND] of U1
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: board setup constraints; error
+    @(118.8000 mm, 35.8600 mm): PTH pad 41 [GND] of U1
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: board setup constraints; error
+    @(119.5000 mm, 33.7600 mm): PTH pad 41 [GND] of U1
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: board setup constraints; error
+    @(119.5000 mm, 35.1600 mm): PTH pad 41 [GND] of U1
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: board setup constraints; error
+    @(120.2000 mm, 33.0600 mm): PTH pad 41 [GND] of U1
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: board setup constraints; error
+    @(120.2000 mm, 34.4600 mm): PTH pad 41 [GND] of U1
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: board setup constraints; error
+    @(120.2000 mm, 35.8600 mm): PTH pad 41 [GND] of U1
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: board setup constraints; error
+    @(120.9000 mm, 33.7600 mm): PTH pad 41 [GND] of U1
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: board setup constraints; error
+    @(120.9000 mm, 35.1600 mm): PTH pad 41 [GND] of U1
+[lib_footprint_mismatch]: Footprint 'ESP32-S3-WROOM-1' does not match copy in library 'RF_Module'.
+    Local override; warning
+    @(121.0000 mm, 32.0000 mm): Footprint U1
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; warning
+    @(111.8625 mm, 84.4900 mm): Segment of U2 on Top Overlay
+    @(111.8625 mm, 84.0500 mm): Reference field of U2
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; warning
+    @(111.8625 mm, 84.0500 mm): Reference field of U2
+    @(111.8625 mm, 84.4900 mm): Segment of U2 on Top Overlay
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; warning
+    @(107.0000 mm, 73.0000 mm): Reference field of C9
+    @(106.2887 mm, 72.4100 mm): Segment of C7 on Top Overlay
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** End of Report **

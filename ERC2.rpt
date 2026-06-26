@@ -1,0 +1,33 @@
+ERC report (2026-04-12T17:49:01+0530, Encoding UTF8)
+
+***** Sheet /
+[pin_not_connected]: Pin not connected
+    ; error
+    @(1300 mils, 2700 mils): Symbol #FLG04 Pin 1 [Power output, Line]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(1900 mils, 1200 mils): Symbol #PWR012 Pin 1 [Power input, Line]
+[pin_to_pin]: Pins of type Open emitter and Output are connected
+    ; error
+    @(5800 mils, 1900 mils): Symbol Q1 Pin 2 [E, Open emitter, Line]
+    @(4400 mils, 1800 mils): Symbol U3 Pin 24 [~{RTS}, Output, Line]
+[pin_to_pin]: Pins of type Open emitter and Output are connected
+    ; error
+    @(5850 mils, 2950 mils): Symbol Q2 Pin 2 [E, Open emitter, Line]
+    @(4400 mils, 2100 mils): Symbol U3 Pin 28 [~{DTR}, Output, Line]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(3550 mils, 7150 mils): Symbol #PWR040 Pin 1 [Power input, Line]
+[multiple_net_names]: Both agnd and GND are attached to the same items; agnd will be used in the netlist
+    ; warning
+    @(9050 mils, 4550 mils): Global Label 'agnd'
+    @(7800 mils, 2650 mils): Symbol #PWR030 Pin 1 [Power input, Line]
+[pin_to_pin]: Pins of type Power output and Power output are connected
+    ; error
+    @(7800 mils, 2650 mils): Symbol #FLG01 Pin 1 [Power output, Line]
+    @(1300 mils, 2700 mils): Symbol #FLG04 Pin 1 [Power output, Line]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(10200 mils, 4150 mils): Symbol U4 Pin 16 [DVDD, Power input, Line]
+
+ ** ERC messages: 8  Errors 7  Warnings 1
