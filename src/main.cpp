@@ -142,6 +142,9 @@ void my_touch_read(lv_indev_drv_t *indev_drv, lv_indev_data_t *data) {
 
 
 void setup_wifi() {
+  // Initialize network stack regardless of saved credentials to prevent LwIP crashes
+  WiFi.mode(WIFI_STA);
+  
   preferences.begin("wifi-config", true);
   String saved_ssid = preferences.getString("ssid", "");
   String saved_password = preferences.getString("password", "");
@@ -314,9 +317,8 @@ void setup() {
     setup_color_buttons();
     load_filament_data(); // Restore last spool settings from NVS
     uiInitialized = true;
-    setup_wifi();
-    setup_web_routes(); // Initialize routes; server will be reachable once WiFi
-                        // connects
+    // setup_wifi();
+    // setup_web_routes(); // Initialize routes; server will be reachable once WiFi connects
     Serial.println("System Ready");
 
     // Initialize e-Paper display (after everything else is stable)
