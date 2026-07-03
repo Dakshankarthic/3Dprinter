@@ -13,7 +13,8 @@
 #include "board_config.h"
 
 #include "epaper.h"
-#include "lgfx_config.h"
+#include <TFT_eSPI.h>
+
 #include "ui/button_functions.h"
 #include "ui/ui.h"
 
@@ -27,9 +28,10 @@ Preferences preferences;
 
 // Objects
 HX711 scale;
-MFRC522 rfid(RFID_SDA_PIN, RFID_RST_PIN);
+MFRC522 rfid(RFID_SDA_PIN, RFID_RST_PIN); // Create MFRC522 instance
 DHT dht(DHT_PIN, DHT_TYPE);
-LGFX tft; // Handles Display AND Touch automatically
+TFT_eSPI tft = TFT_eSPI(); // Handles Display AND Touch automatically
+
 
 // State variables
 bool uiInitialized = false;
@@ -111,9 +113,7 @@ void my_disp_flush(lv_disp_drv_t *disp, const lv_area_t *area,
   uint32_t h = (area->y2 - area->y1 + 1);
   tft.startWrite();
   tft.setAddrWindow(area->x1, area->y1, w, h);
-  // Try with byte swap enabled (third parameter = true)
-  // If colors are still wrong, change true to false
-  tft.pushPixels((uint16_t *)&color_p->full, w * h, true);
+  tft.pushColors((uint16_t *)&color_p->full, w * h, true);
   tft.endWrite();
   lv_disp_flush_ready(disp);
 }
@@ -157,6 +157,7 @@ void setup_wifi() {
   }
 }
 
+
 void setup() {
   Serial.begin(115200);
   while (!Serial)
@@ -175,8 +176,7 @@ void setup() {
   digitalWrite(EPAPER_CS_PIN, HIGH);
 
   // 2. Initialize Hardware SPI Object with project-specific pins
-  // Without this, libraries using the global 'SPI' object (GxEPD2, MFRC522)
-  // would use default ESP32-S3 pins, causing conflicts.
+  // Used by GxEPD2 and MFRC522 (and now safely shared with TFT_eSPI)
   SPI.begin(DISPLAY_PIN_SCLK, DISPLAY_PIN_MISO, DISPLAY_PIN_MOSI);
 
   // Pins
@@ -192,13 +192,22 @@ void setup() {
 
   // 2. Initialize Main Display & Touch
   Serial.println("Initializing display...");
+  pinMode(11, OUTPUT); // TFT_BL
+  digitalWrite(11, HIGH);
   delay(100); // Give serial time to flush
-  bool displayInitResult =
-      tft.initDisplay(); // Initializes SPI, Display AND Touch
+  
+  tft.init();
+  tft.setRotation(1);
+  tft.setSwapBytes(true);
+  
+  // Basic touch calibration data (can be refined later)
+  uint16_t calData[5] = {300, 3400, 200, 3600, 1};
+  tft.setTouch(calData);
+  
+  bool displayInitResult = true;
 
   if (displayInitResult) {
     Serial.println("Display initialized successfully");
-    tft.debugTouchController();
 
     // Init Sensors
     pinMode(HX711_DOUT_PIN, INPUT_PULLUP);
@@ -302,7 +311,7 @@ void setup() {
     indev_drv.read_cb = my_touch_read; // Uses tft.getTouch()
     lv_indev_drv_register(&indev_drv);
 
-    tft.setBrightness(255);
+    tft.fillScreen(TFT_BLACK);
 
     // Load saved settings
     // preferences.begin("settings", true);
@@ -334,7 +343,6 @@ void setup() {
     delay(100);
     tft.setRotation(1);
     tft.setSwapBytes(true);
-    tft.setBrightness(255);
     tft.fillScreen(TFT_BLACK);
     delay(50);
     lv_obj_invalidate(lv_scr_act());
