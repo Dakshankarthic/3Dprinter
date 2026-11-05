@@ -118,19 +118,23 @@ void my_disp_flush(lv_disp_drv_t *disp, const lv_area_t *area,
   lv_disp_flush_ready(disp);
 }
 
-// LVGL Touch Read Callback (Uses built-in LovyanGFX touch)
+// LVGL Touch Read Callback
 void my_touch_read(lv_indev_drv_t *indev_drv, lv_indev_data_t *data) {
   uint16_t touchX, touchY;
   bool touched = tft.getTouch(&touchX, &touchY);
 
   if (touched) {
+    // Clamp to display bounds (no manual inversion needed — calibration handles it)
+    if (touchX >= 480) touchX = 479;
+    if (touchY >= 320) touchY = 319;
+
     data->state = LV_INDEV_STATE_PR;
     data->point.x = touchX;
     data->point.y = touchY;
 
     static uint32_t lastDebug = 0;
     if (millis() - lastDebug > 500) {
-      Serial.printf("Touch detected -> X=%d, Y=%d\n", touchX, touchY);
+      Serial.printf("Touch -> X=%d, Y=%d\n", touchX, touchY);
       lastDebug = millis();
     }
   } else {
@@ -160,11 +164,17 @@ void setup_wifi() {
 
 void setup() {
   Serial.begin(115200);
-  while (!Serial)
+  // Non-blocking wait for USB Serial (max 1.5s timeout)
+  uint32_t t0 = millis();
+  while (!Serial && (millis() - t0 < 1500))
     ;
-  Serial.println("Booting...");
+  Serial.println("Booting Smart Dryer...");
 
-  // 1. PROACTIVE PIN INITIALIZATION: Deselect all SPI devices immediately
+  // 1. Keep Backlight OFF during boot to avoid bright white screen
+  pinMode(DISPLAY_PIN_BL, OUTPUT);
+  digitalWrite(DISPLAY_PIN_BL, LOW);
+
+  // 2. PROACTIVE PIN INITIALIZATION: Deselect all SPI devices immediately
   // This prevents bus contention before libraries are fully initialized.
   pinMode(DISPLAY_PIN_CS, OUTPUT);
   digitalWrite(DISPLAY_PIN_CS, HIGH);
@@ -175,7 +185,16 @@ void setup() {
   pinMode(EPAPER_CS_PIN, OUTPUT);
   digitalWrite(EPAPER_CS_PIN, HIGH);
 
-  // 2. Initialize Hardware SPI Object with project-specific pins
+  // 3. HARDWARE RESET the ST7796 Display (Essential for Cold Boot)
+  pinMode(DISPLAY_PIN_RST, OUTPUT);
+  digitalWrite(DISPLAY_PIN_RST, HIGH);
+  delay(20);
+  digitalWrite(DISPLAY_PIN_RST, LOW);   // Pulse Reset LOW
+  delay(30);
+  digitalWrite(DISPLAY_PIN_RST, HIGH);  // Release Reset HIGH
+  delay(150);                           // Allow internal charge pumps to power up
+
+  // 4. Initialize Hardware SPI Object with project-specific pins
   // Used by GxEPD2 and MFRC522 (and now safely shared with TFT_eSPI)
   SPI.begin(DISPLAY_PIN_SCLK, DISPLAY_PIN_MISO, DISPLAY_PIN_MOSI);
 
@@ -188,20 +207,21 @@ void setup() {
   ledcAttachPin(FAN_MOSFET_PIN, FAN_PWM_CHANNEL);
   ledcWrite(FAN_PWM_CHANNEL, 0); // Start off
 
-  // Initialize Display & Touch via LovyanGFX
-
-  // 2. Initialize Main Display & Touch
+  // 5. Initialize Main Display & Touch
   Serial.println("Initializing display...");
-  pinMode(11, OUTPUT); // TFT_BL
-  digitalWrite(11, HIGH);
-  delay(100); // Give serial time to flush
-  
   tft.init();
   tft.setRotation(1);
   tft.setSwapBytes(true);
-  
-  // Basic touch calibration data (can be refined later)
-  uint16_t calData[5] = {300, 3400, 200, 3600, 1};
+  tft.fillScreen(TFT_BLACK); // Paint black before turning backlight on
+
+  // 6. Turn Backlight ON now that display is ready
+  digitalWrite(DISPLAY_PIN_BL, HIGH);
+
+  // Touch calibration data for XPT2046 with rotation=1 (landscape)
+  // Format: {xMin, xMax, yMin, yMax, axisSwap}
+  // axisSwap=7 is typical for rotation=1 on ST7796+XPT2046 panels
+  // For precise calibration, run the TFT_eSPI Touch_calibrate example
+  uint16_t calData[5] = {300, 3600, 300, 3600, 7};
   tft.setTouch(calData);
   
   bool displayInitResult = true;
