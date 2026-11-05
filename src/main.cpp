@@ -138,7 +138,7 @@ void my_disp_flush(lv_disp_drv_t *disp, const lv_area_t *area,
   uint32_t h = (area->y2 - area->y1 + 1);
   tft.startWrite();
   tft.setAddrWindow(area->x1, area->y1, w, h);
-  tft.pushColors((uint16_t *)&color_p->full, w * h, true);
+  tft.pushColors((uint16_t *)&color_p->full, w * h, false);
   tft.endWrite();
   lv_disp_flush_ready(disp);
 }
@@ -243,7 +243,7 @@ void setup() {
   Serial.println("Initializing display...");
   tft.init();
   tft.setRotation(1);
-  tft.setSwapBytes(true);
+  tft.setSwapBytes(false);
   tft.fillScreen(TFT_BLACK); // Paint black before turning backlight on
 
   // 6. Turn Backlight ON now that display is ready
