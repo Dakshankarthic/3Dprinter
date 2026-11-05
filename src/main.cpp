@@ -33,6 +33,31 @@ DHT dht(DHT_PIN, DHT_TYPE);
 TFT_eSPI tft = TFT_eSPI(); // Handles Display AND Touch automatically
 
 
+// ── SPI Bus Isolation Helpers ──
+// All SPI devices share one bus. Before talking to any device,
+// deselect all others to prevent bus contention.
+static inline void spi_deselect_all() {
+  digitalWrite(DISPLAY_PIN_CS, HIGH);
+  digitalWrite(TOUCH_PIN_CS, HIGH);
+  digitalWrite(RFID_SDA_PIN, HIGH);
+  digitalWrite(EPAPER_CS_PIN, HIGH);
+}
+
+static inline void spi_select_rfid() {
+  spi_deselect_all();
+  #if defined(CONFIG_IDF_TARGET_ESP32S3) || defined(CONFIG_IDF_TARGET_ESP32)
+  #ifdef SET_BUS_READ_MODE
+  SET_BUS_READ_MODE;
+  #endif
+  #endif
+  delayMicroseconds(5);  // Bus settle time
+}
+
+static inline void spi_release_rfid() {
+  digitalWrite(RFID_SDA_PIN, HIGH);
+  delayMicroseconds(5);
+}
+
 // State variables
 bool uiInitialized = false;
 bool wifiConnected = false;
@@ -185,6 +210,13 @@ void setup() {
   pinMode(EPAPER_CS_PIN, OUTPUT);
   digitalWrite(EPAPER_CS_PIN, HIGH);
 
+  // Hardware Reset & Wakeup for RFID Reader (GPIO 48)
+  pinMode(RFID_RST_PIN, OUTPUT);
+  digitalWrite(RFID_RST_PIN, LOW);
+  delay(20);
+  digitalWrite(RFID_RST_PIN, HIGH);
+  delay(50);
+
   // 3. HARDWARE RESET the ST7796 Display (Essential for Cold Boot)
   pinMode(DISPLAY_PIN_RST, OUTPUT);
   digitalWrite(DISPLAY_PIN_RST, HIGH);
@@ -268,17 +300,17 @@ void setup() {
     isDhtReady = !isnan(t_check);
 
     // RFID: Init on the shared SPI2 bus (same as display & touch)
-    // LovyanGFX already initialized SPI2 with pins 14/12/13
-    // MFRC522 uses the global SPI object which is also SPI2
-    pinMode(RFID_SDA_PIN, OUTPUT);
-    digitalWrite(RFID_SDA_PIN, HIGH); // Deselect RFID before init
+    // IMPORTANT: Deselect all other SPI devices before RFID communication
+    spi_select_rfid();
     rfid.PCD_Init();
-    delay(100);                               // Let RFID module stabilize
+    delay(50);
+    rfid.PCD_AntennaOn();
     rfid.PCD_SetAntennaGain(rfid.RxGain_max); // Max gain (48dB) for smart cards
     byte v = rfid.PCD_ReadRegister(MFRC522::VersionReg);
     isRfidReady = (v != 0x00 && v != 0xFF);
     Serial.printf("RFID Init: version=0x%02X, ready=%d, gain=0x%02X\n", v,
                   isRfidReady, rfid.PCD_GetAntennaGain());
+    spi_release_rfid();
 
     // Init LVGL
     lv_init();
@@ -429,18 +461,29 @@ void loop() {
       isDhtReady = false;
     }
 
-    // Simple RFID presence check
+    // Simple RFID presence check (with SPI bus isolation)
+    spi_select_rfid();
     byte v_live = rfid.PCD_ReadRegister(MFRC522::VersionReg);
     isRfidReady = (v_live != 0x00 && v_live != 0xFF);
     static unsigned long lastRfidInit = 0;
-    if (!isRfidReady && (millis() - lastRfidInit > 10000)) {
+    if (!isRfidReady && (millis() - lastRfidInit > 5000)) {
       lastRfidInit = millis();
+      Serial.printf("RFID not ready (v=0x%02X). Re-powering...\n", v_live);
+      digitalWrite(RFID_RST_PIN, LOW);
+      delay(10);
+      digitalWrite(RFID_RST_PIN, HIGH);
+      delay(50);
       rfid.PCD_Init();
+      delay(20);
+      rfid.PCD_AntennaOn();
+      rfid.PCD_SetAntennaGain(rfid.RxGain_max);
     }
 
-    // RFID spool management – check for card tap (inside sensor block to
-    // avoid SPI conflicts with display)
-    rfid_check_and_handle();
+    // RFID spool management – check for card tap
+    if (isRfidReady) {
+      rfid_check_and_handle();
+    }
+    spi_release_rfid();
 
     if (uiInitialized) {
       ui_tick();

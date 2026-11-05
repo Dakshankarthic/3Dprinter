@@ -1016,14 +1016,17 @@ void rfid_check_and_handle() {
   if (!isRfidReady)
     return;
 
-  // Halt any previous card first to reset communication
-  rfid.PICC_HaltA();
-  rfid.PCD_StopCrypto1();
+  // Look for card: try WakeupA first (wakes both IDLE and HALTed cards), then IsNewCardPresent
+  byte bufferATQA[2];
+  byte bufferSize = sizeof(bufferATQA);
+  rfid.PCD_WriteRegister(rfid.TxModeReg, 0x00);
+  rfid.PCD_WriteRegister(rfid.RxModeReg, 0x00);
+  rfid.PCD_WriteRegister(rfid.ModWidthReg, 0x26);
 
-  // Try to detect card (3 attempts)
   bool newCard = false;
   for (int attempt = 0; attempt < 3; attempt++) {
-    if (rfid.PICC_IsNewCardPresent()) {
+    if (rfid.PICC_WakeupA(bufferATQA, &bufferSize) == MFRC522::STATUS_OK ||
+        rfid.PICC_IsNewCardPresent()) {
       newCard = true;
       break;
     }
