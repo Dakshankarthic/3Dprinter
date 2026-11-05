@@ -7833,7 +7833,8 @@ void replacePageHook(int16_t pageId, uint32_t animType, uint32_t speed, uint32_t
     }
     eez::flow::onPageChanged(g_currentScreen + 1, pageId);
     g_currentScreen = screenIndex;
-    lv_scr_load_anim(screen, (lv_scr_load_anim_t)animType, speed, delay, false);
+    // Fast, clean, zero-flicker screen loading
+    lv_scr_load_anim(screen, LV_SCR_LOAD_ANIM_NONE, 0, 0, false);
 }
 extern "C" void flowOnPageLoaded(unsigned pageIndex) {
     eez::flow::getPageFlowState(eez::g_mainAssets, pageIndex);

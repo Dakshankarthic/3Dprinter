@@ -102,10 +102,10 @@ static void refresh_history_ui() {
   }
 }
 
-// --- E-Paper helper
+// --- E-Paper helper (debounced to prevent UI freeze)
 void trigger_epaper_update() {
-  epaper_update_spool(s_material, s_hersteller, s_colour, filamentWeight,
-                      s_maxWeight);
+  epaper_request_update(s_material, s_hersteller, s_colour, filamentWeight,
+                        s_maxWeight);
 }
 
 // --- UI Synchronization
@@ -275,7 +275,7 @@ static void cb_material_btn(lv_event_t *e) {
   }
   if (objects.neue_spule_hersteller_screen)
     lv_scr_load_anim(objects.neue_spule_hersteller_screen,
-                     LV_SCR_LOAD_ANIM_FADE_IN, 200, 0, false);
+                     LV_SCR_LOAD_ANIM_NONE, 0, 0, false);
 }
 
 static void cb_hersteller_btn(lv_event_t *e) {
@@ -288,8 +288,8 @@ static void cb_hersteller_btn(lv_event_t *e) {
     }
   }
   if (objects.neue_spule_farbe_screen)
-    lv_scr_load_anim(objects.neue_spule_farbe_screen, LV_SCR_LOAD_ANIM_FADE_IN,
-                     200, 0, false);
+    lv_scr_load_anim(objects.neue_spule_farbe_screen, LV_SCR_LOAD_ANIM_NONE,
+                     0, 0, false);
 }
 
 static void cb_farbe_btn(lv_event_t *e) {
@@ -308,7 +308,7 @@ static void cb_farbe_btn(lv_event_t *e) {
   }
 
   if (objects.homescreen)
-    lv_scr_load_anim(objects.homescreen, LV_SCR_LOAD_ANIM_FADE_IN, 200, 0,
+    lv_scr_load_anim(objects.homescreen, LV_SCR_LOAD_ANIM_NONE, 0, 0,
                      false);
 }
 
@@ -451,8 +451,8 @@ static void cb_wifi_list_btn(lv_event_t *e) {
     strncpy(selectedSSID, ssid, 32);
     selectedPassword[0] = '\0';
     if (objects.passworteingabe_screen)
-      lv_scr_load_anim(objects.passworteingabe_screen, LV_SCR_LOAD_ANIM_FADE_IN,
-                       200, 0, false);
+      lv_scr_load_anim(objects.passworteingabe_screen, LV_SCR_LOAD_ANIM_NONE,
+                       0, 0, false);
   }
 }
 
@@ -478,13 +478,13 @@ static void cb_keyboard_custom(lv_event_t *e) {
       if (isWiFiSSID) {
         if (objects.passworteingabe_screen) {
           lv_scr_load_anim(objects.passworteingabe_screen,
-                           LV_SCR_LOAD_ANIM_FADE_IN, 200, 0, false);
+                           LV_SCR_LOAD_ANIM_NONE, 0, 0, false);
         }
       } else if (isWiFiPass) {
         wifiStatusMsg = "Connecting...";
         WiFi.begin(selectedSSID, selectedPassword);
         if (objects.homescreen)
-          lv_scr_load_anim(objects.homescreen, LV_SCR_LOAD_ANIM_FADE_IN, 200, 0,
+          lv_scr_load_anim(objects.homescreen, LV_SCR_LOAD_ANIM_NONE, 0, 0,
                            false);
       } else {
         // Custom entry (Color, Manufacturer or Material)
@@ -510,7 +510,7 @@ static void cb_keyboard_custom(lv_event_t *e) {
         }
 
         if (objects.homescreen)
-          lv_scr_load_anim(objects.homescreen, LV_SCR_LOAD_ANIM_FADE_IN, 200, 0,
+          lv_scr_load_anim(objects.homescreen, LV_SCR_LOAD_ANIM_NONE, 0, 0,
                            false);
       }
       // CRITICAL: Stop propagation so the flow engine doesn't move to next
@@ -519,7 +519,7 @@ static void cb_keyboard_custom(lv_event_t *e) {
     } else {
       // Cancel
       if (objects.homescreen)
-        lv_scr_load_anim(objects.homescreen, LV_SCR_LOAD_ANIM_FADE_IN, 200, 0,
+        lv_scr_load_anim(objects.homescreen, LV_SCR_LOAD_ANIM_NONE, 0, 0,
                          false);
       lv_event_stop_processing(e);
     }
@@ -679,7 +679,7 @@ void setup_color_buttons() {
 
       lv_obj_set_user_data(objects.ssid_label, buf);
       lv_label_set_text(objects.ssid_label, buf);
-      lv_scr_load_anim(objects.ssid_screen, LV_SCR_LOAD_ANIM_FADE_IN, 200, 0,
+      lv_scr_load_anim(objects.ssid_screen, LV_SCR_LOAD_ANIM_NONE, 0, 0,
                        false);
     }
   };

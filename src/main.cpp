@@ -381,25 +381,9 @@ void setup() {
                         // connects
     Serial.println("System Ready");
 
-    // Initialize e-Paper display (after everything else is stable)
+    // Initialize e-Paper display cleanly
     epaper_init();
-    trigger_epaper_update();
-
-    // --- TFT BUS RESYNC after E-Paper SPI ---
-    // Do NOT call tft.init() - it resets touch calibration.
-    // Instead just force a display write to re-assert the bus state.
-    Serial.println("Resyncing TFT after E-Paper...");
-    digitalWrite(EPAPER_CS_PIN, HIGH);
-    digitalWrite(DISPLAY_PIN_CS, HIGH);
-    digitalWrite(TOUCH_PIN_CS, HIGH);
-    delay(100);
-    tft.setRotation(1);
-    tft.setSwapBytes(true);
-    tft.fillScreen(TFT_BLACK);
-    delay(50);
-    lv_obj_invalidate(lv_scr_act());
-    lv_refr_now(NULL);
-    Serial.println("TFT resynced.");
+    trigger_epaper_update(); // Queues the spool info update without blocking
 
   } else {
     Serial.println("Display Init Failed!");
@@ -416,6 +400,11 @@ void setup() {
 
 void loop() {
   lv_timer_handler();
+  if (uiInitialized) {
+    ui_tick();
+  }
+  epaper_tick(); // Service debounced e-paper refresh when idle
+
   check_wifi_scan_results();
   update_wifi_status_logic();
 
@@ -426,11 +415,11 @@ void loop() {
     lastSensorRead = millis();
 
     if (scale.is_ready()) {
-      // Let the HX711 library average 10 samples internally (most reliable)
-      float raw = scale.get_units(10);
+      // 1 sample (~10ms) instead of 10 samples (1000ms) to prevent UI freezing
+      float raw = scale.get_units(1);
 
-      // EMA: smooth out reading-to-reading noise
-      filteredWeight = (filteredWeight * 0.5f) + (raw * 0.5f);
+      // EMA filter: smooth out noise without blocking the CPU
+      filteredWeight = (filteredWeight * 0.7f) + (raw * 0.3f);
 
       // Deadzone: clamp small values to 0 to prevent display jitter
       if (abs(filteredWeight) < 10.0f) {
@@ -486,7 +475,6 @@ void loop() {
     spi_release_rfid();
 
     if (uiInitialized) {
-      ui_tick();
       update_ui_sensor_data();
     }
   }
